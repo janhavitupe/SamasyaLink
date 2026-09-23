@@ -1,0 +1,8 @@
+{
+  "_meta": {
+    "data_status": "verified",
+    "note": "Mentor data will be populated from verified institutional faculty rosters. Demo data removed for production.",
+    "capacity_note": "current_load / max_capacity will reflect actual project assignments from the system."
+  },
+  "mentors": []
+}

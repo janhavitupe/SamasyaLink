@@ -1,0 +1,9 @@
+{
+  "_meta": {
+    "note": "Industry partner data will be populated from verified partnerships. Demo data removed for production.",
+    "data_status_options": [
+      "verified"
+    ]
+  },
+  "partners": []
+}

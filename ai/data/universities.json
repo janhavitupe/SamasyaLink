@@ -1,0 +1,9 @@
+{
+  "_meta": {
+    "note": "Universities data will be populated from verified institutional sources. Demo data removed for production.",
+    "data_status_options": [
+      "verified"
+    ]
+  },
+  "institutions": []
+}

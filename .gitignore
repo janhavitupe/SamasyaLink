@@ -1,0 +1,49 @@
+# ---- Dependencies ----
+# Reinstall with `npm install` (frontend) and `pip install -r requirements.txt` (ai).
+# The virtualenv was removed from tracking in 93df67e1 but never ignored, so it kept reappearing as
+# ~29,000 untracked files where a single `git add -A` would have committed 1.5GB of Windows-only
+# wheels that cannot run on a Linux host anyway.
+node_modules/
+ai/.venv/
+.venv/
+venv/
+
+# ---- Python build artifacts ----
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+
+# ---- Next.js build output ----
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+
+# ---- Secrets ----
+# Only the .example templates belong in the repo. Everything else here holds real keys.
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# ---- Local database snapshots ----
+# Problem state lives in PostgreSQL now (PROBLEM_DB_URL), so the SQLite file is only the offline
+# fallback and is no longer how demo data reaches another machine. Tracking it had become actively
+# misleading: the committed copy drifts from the live database, and anyone running without
+# PROBLEM_DB_URL set would silently read that stale snapshot instead of an obviously empty one.
+ai/data/problems.sqlite3
+*.sqlite3.backup*
+*.sqlite3-journal
+*.sqlite3-wal
+*.sqlite3-shm
+
+# ---- Logs and scratch output ----
+*.log
+logs/
+
+# ---- Editor / OS ----
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
